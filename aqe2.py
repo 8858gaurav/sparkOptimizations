@@ -77,6 +77,7 @@ df_mapping = spark.read.format("csv").option('delimiter', "|").schema("status st
 
 df_orders_new.join(df_mapping, df_mapping.status == df_orders_new.order_status, "inner").write.format("csv").mode("overwrite").save("112")
     
-# in the first stage, we'll see 2 partitions, because our data is around 7MB
-# in the second stage, again we get around 4 to 5 partitons, (for wide transaformations, mostly we'll get 200 partitions)
+# in the first stage, we'll see 1 partitions, because our data (mapping) is around 118B
+# in the second stage, again we get around 23 partitons, (for wide transaformations, mostly we'll get 200 partitions)
+# this will create a 23 files under the folder 112, in your hdfs home directory.
 
