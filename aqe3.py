@@ -38,7 +38,7 @@ if __name__ == '__main__':
     # a broadcasthash join strategies.
 
     # by default AQE is enabled in Pyspark3, here customer data is = 12.73 mb
-    # distinct will reduces the data size here, it will reduced the data from 14 mb to less than 10 mb, so that it can fit on the drivers.
+    # distinct will reduces the data size here, it will reduced the data from 12.73 mb to less than 10 mb, so that it can fit on the drivers.
     # it will do a broadcast hash join automatically, in broadcast hash Join, it will not create a new stage to perform the join operations.
 
     spark.conf.set("spark.sql.adaptive.enabled", True)
