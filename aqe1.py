@@ -29,7 +29,7 @@ if __name__ == '__main__':
     spark.read.format("json").schema(orders_schema).load("/public/trendytech/datasets/orders.json").createOrReplaceTempView("orders")
 
     spark.sql("select order_status, count(*) from orders group by 1").write.format('noop').mode("overwrite").save()
-    # in this only 8 partitions are having the data, & remaining 192 partition are empty. 
+    # in the second stage, in this only 8 partitions are having the data, & remaining 192 partition are empty. 
     
     # enabling the AQE
     spark.conf.set("spark.sql.adaptive.enabled", True)
@@ -40,4 +40,4 @@ if __name__ == '__main__':
 
     spark.sql("select order_status, count(*) from orders group by 1").write.format('noop').mode("overwrite").save()
     # in the first stage, we'll see 2 partitions, because our data is around 7MB
-    # in the second stage, again we get around 4 to 5 partitons, (for wide transaformations, mostly we'll get 200 partitions)
+    # in the second stage, again we get only 4 to 5 partitons, (for wide transaformations, mostly we'll get 200 partitions)
