@@ -41,6 +41,8 @@ if __name__ == '__main__':
     # 97.5 M   292.5 M  /public/trendytech/retail_db/ordersnew/order_status=PROCESSING
     # 18.4 M   55.1 M   /public/trendytech/retail_db/ordersnew/order_status=SUSPECTED_FRAUD
 
+    #[itv020752@g01 ~]$ hadoop fs -ls -h /public/trendytech/datasets/mapping_data
+    #-rw-r--r--   3 itv005857 supergroup        118B 2023-07-17 15:38 /public/trendytech/datasets/mapping_data
 
     # job tab overview
     #  stages:Succeeded/Total            Task(for all stages):Succeeded/Total 
