@@ -53,6 +53,8 @@ if __name__ == '__main__':
     # duration       Tasks: Succeeded/Total          input                     output
     # 4 min                23/23                      1.9G(1987.5 MiB)          3.2GB
 
+    # under sql tabs, you'll find a broadcasthash Join
+
 # disabling the AQE
 
 if __name__ == '__main__':
