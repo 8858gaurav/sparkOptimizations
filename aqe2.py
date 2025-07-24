@@ -81,3 +81,5 @@ df_orders_new.join(df_mapping, df_mapping.status == df_orders_new.order_status, 
 # in the second stage, again we get around 23 partitons, (for wide transaformations, mostly we'll get 200 partitions)
 # this will create a 23 files under the folder 112, in your hdfs home directory.
 
+
+# will enabling/disabling of AQE don't work? 
