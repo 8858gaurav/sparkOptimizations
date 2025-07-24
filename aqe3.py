@@ -33,8 +33,8 @@ if __name__ == '__main__':
     # hadoop fs -ls 113
     # it'll create a 200 files under this path, & the size of this path is 2.9 GB
     
-    #if we disable the AQE, after running the code, during the shuffle, we get to know the runtime stats, before that
-    # it doesn't now. in case of without AQE, it would show you sort merge join strategies. after enabling the aqe, it will show you
+    # After running the code, during the shuffle, we get to know the runtime stats, before that
+    # it doesn't know. in case of without AQE, it would show you sort merge join strategies. after enabling the aqe, it will show you
     # a broadcasthash join strategies.
 
     # by default AQE is enabled in Pyspark3, here customer data is = 12.73 mb
